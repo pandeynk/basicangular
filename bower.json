@@ -1,0 +1,31 @@
+{
+  "name": "eicherindia",
+  "description": "Eicher India Internal Tracking Project",
+  "main": "",
+  "authors": [
+    "Eicher India"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Eicher",
+    "India"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "font-awesome": "fontawesome#~4.5.0",
+    "bootstrap-sass": "~3.3.6",
+    "AdminLTE": "admin-lte#^2.3.2",
+    "bootstrap-star-rating": "^3.5.7",
+    "angular": "^1.4.9"
+  }
+}
