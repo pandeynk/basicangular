@@ -7,7 +7,7 @@ namespace Acme\Jobs;
  */
 class BlogWasPosted
 {
-    protected $blog;
+    public $blog;
     public function __construct(Blog $blog)
     {
         $this->blog = $blog;

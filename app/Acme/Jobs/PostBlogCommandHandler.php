@@ -10,21 +10,22 @@ use Acme\Eventing\EventDispatcher;
  */
 class PostBlogCommandHandler implements CommandHandler
 {
-    protected $blog;
     protected $eventDispatcher;
 
-    public function __construct(Blog  $blog, EventDispatcher $eventDispatcher)
+    public function __construct(EventDispatcher $eventDispatcher)
     {
-        $this->blog = $blog;
         $this->eventDispatcher = $eventDispatcher;
     }
-
+    /**
+     * handles command.
+     *
+     * @param [type] $command [description]
+     *
+     * @return [type] [description]
+     */
     public function handle($command)
     {
-        $blog = $this->blog->post(
-                $command->title,
-                $command->description
-            );
+        $blog = Blog::post($command->title, $command->description);
 
         $this->eventDispatcher->dispatch($blog->releaseEvents());
         var_dump('Inside post blog command handler');

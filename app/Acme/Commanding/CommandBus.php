@@ -5,7 +5,7 @@ namespace Acme\Commanding;
 use Illuminate\Foundation\Application;
 
 /**
- * 
+ * Command Bus Class, to move data from command to command handler.
  */
 class CommandBus
 {

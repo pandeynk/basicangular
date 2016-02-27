@@ -10,6 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+/*foreach (['Acme\Listeners\EmailNotifier', 'Acme\Listeners\ReportListener'] as $listener) {
+    Event::listen('Acme.*', $listener);
+}*/
 
 Route::get('/', ['uses' => 'LearnhubController@index']);
 Route::get('/data', ['uses' => 'LearnhubController@data']);

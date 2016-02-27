@@ -13,7 +13,10 @@ class EventDispatcher
     protected $event;
     protected $log;
     /**
-     * @param Dispatcher
+     * initializes Dispatcher and Logger.
+     *
+     * @param Dispatcher $dispatcher [description]
+     * @param Writer     $log        [description]
      */
     public function __construct(Dispatcher $dispatcher, Writer $log)
     {
@@ -31,7 +34,7 @@ class EventDispatcher
             $eventName = str_replace('\\', '.', get_class($event));
             $this->event->fire($eventName, $event);
             $this->log->info('Event was fired');
-            echo "Event $evenName was fired";
+            echo "Event $eventName was fired";
         }
     }
 }
