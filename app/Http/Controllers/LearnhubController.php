@@ -2,8 +2,7 @@
 
 namespace app\Http\Controllers;
 
-use App\LearnHub;
-use App\Http\Controllers\Controller;
+use app\LearnHub;
 use DB;
 
 class LearnhubController extends Controller

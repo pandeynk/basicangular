@@ -1,7 +1,7 @@
 <?php
 
-namespace App;
 
+use app\LearnHub;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -23,4 +23,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    protected $learnhub;
+
+    public function __construct(LearnHub $LearnHub)
+    {
+        $this->learnhub = $learnhub;
+    }
 }

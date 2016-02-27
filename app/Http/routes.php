@@ -14,6 +14,7 @@
 Route::get('/', ['uses' => 'LearnhubController@index']);
 Route::get('/data', ['uses' => 'LearnhubController@data']);
 
+Route::get('/blog', ['uses' => 'BlogController@store']);
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -27,4 +28,10 @@ Route::get('/data', ['uses' => 'LearnhubController@data']);
 
 Route::group(['middleware' => ['web']], function () {
     //
+});
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
 });
